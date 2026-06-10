@@ -1,0 +1,25 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">This project demonstrates a simple button shake effect using JavaScript and CSS transform
+            properties. When the user clicks the button, it moves left and right quickly to create a shaking animation
+            and then returns to its original position..</p>
+    </div>
+</div>
+<button id="btn">Click Me</button>
+
+<script>
+    let btn = document.getElementById("btn");
+
+    btn.addEventListener("click", function () {
+        btn.style.transform = "translateX(-5px)";
+
+        setTimeout(() => {
+            btn.style.transform = "translateX(5px)";
+        }, 100);
+
+        setTimeout(() => {
+            btn.style.transform = "translateX(0)";
+        }, 200);
+    });
+</script>
